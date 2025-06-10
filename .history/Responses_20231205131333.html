@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include your meta tags, links, and scripts here -->
+
+    <!-- Your existing styles -->
+    <style>
+        /* Add your existing styles here */
+    </style>
+
+</head>
+
+<body class="fadeOut">
+
+    <?php
+    // Your database connection code here
+    $hostname = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "wedding";
+    $conn = new mysqli($hostname, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Get data based on filter (action)
+    $filter = isset($_GET['filter']) ? $_GET['filter'] : ''; // assuming 'action' is your filter column
+    $sql = "SELECT * FROM attendees";
+    if (!empty($filter)) {
+        $sql .= " WHERE action = '$filter'";
+    }
+    $result = $conn->query($sql);
+
+    if ($result === false) {
+        die("Query execution failed: " . $conn->error);
+    }
+    ?>
+
+    <nav class="navbar navbar-expand-lg navbar fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <!-- Your navigation content -->
+        </div>
+    </nav>
+
+    <div class="container-fluid story" id="rsvp">
+        <div class="container content " height="200vh">
+
+            <div class="container-fluid firstform" data-aos="fade-up">
+                <!-- Dropdown for filtering -->
+                <form method="get" action="">
+                    <label for="filter">Filter by Action:</label>
+                    <select name="filter" id="filter">
+                        <option value="">Show All</option>
+                        <option value="Coming">Coming</option>
+                        <option value="Not Coming">Not Coming</option>
+                        <option value="">No Action</option>
+                    </select>
+                    <button type="submit">Apply Filter</button>
+                </form>
+
+                <!-- Display table with data -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <!-- Add other columns as needed -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        // Display data in the table
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>{$row['id']}</td>";
+                            echo "<td>{$row['first_name']}</td>";
+                            echo "<td>{$row['last_name']}</td>";
+                            // Add other columns as needed
+                            echo "</tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include your AOS and Bootstrap scripts here -->
+
+</body>
+
+</html>

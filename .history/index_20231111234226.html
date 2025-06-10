@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You are Invited</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href='https://fonts.googleapis.com/css?family=Dancing Script&effect=emboss' rel='stylesheet'>
+  <link href="https://fonts.cdnfonts.com/css/headstay" rel="stylesheet">
+
+
+  <style>
+    body {
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+        duration: 3000;
+
+      }
+    }
+
+    .timer p {
+      color: #fff3e7;
+      font-size: 4vh;
+    }
+
+    #mainNav {
+      min-height: 3.5rem;
+      font-family: 'Dancing Script';
+      background-color: #fff3e7;
+
+    }
+
+    @media (min-width: 992px) {
+      #mainNav {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+        background: rgb(88, 88, 88);
+        background: linear-gradient(0deg, rgba(88, 88, 88, 0.06766456582633051) 0%, rgba(36, 29, 22, 0.7931547619047619) 100%);
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      /* BOOKMARK */
+      #mainNav .navbar-brand {
+        padding: 0.5rem 0;
+        color: #fff3e7;
+      }
+
+      #mainNav .nav-link {
+        transition: none;
+        padding: 2rem 1.5rem;
+        color: #fff3e7;
+        font-family: 'Dancing Script';
+      }
+
+      /* hover li */
+      #mainNav .nav-link:hover {
+        color: #fff3e7;
+      }
+
+      #mainNav .nav-link:active {
+        color: #fff3e7;
+      }
+
+      /* bookmark */
+      #mainNav.navbar-shrink {
+        background: none;
+        background-color: #fff3e7;
+      }
+
+      #mainNav.navbar-shrink .navbar-brand {
+        color: #000;
+      }
+
+      #mainNav.navbar-shrink .nav-link {
+        color: #000;
+        padding: 1.5rem 1.5rem 1.25rem;
+        border-bottom: 0.25rem solid transparent;
+      }
+
+      #mainNav.navbar-shrink .nav-link:hover {
+        color: #fff3e7;
+      }
+
+      #mainNav.navbar-shrink .nav-link:active {
+        color: #fff3e7;
+      }
+
+      #mainNav.navbar-shrink .nav-link.active {
+        color: #fff3e7;
+        outline: none;
+        border-bottom: 0.25rem solid rgb(108, 83, 69);
+      }
+
+    }
+  </style>
+
+</head>
+
+<body class="fadeOut"  
+style="background-image: url('ABC01088.JPG');  
+background-size: cover;
+background-position-y: center;
+
+background-repeat: no-repeat;
+">
+  <!-- BACKGROUND MUSIC -->
+  <!-- <audio src="buttercup.mp3" autoplay loop></audio> -->
+
+  <nav class="navbar navbar-expand-lg navbar fixed-top" id="mainNav">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="#page-top"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html"> Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="ourstory.html">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link " href="details.html">Wedding Details</a></li>
+          <li class="nav-item"><a class="nav-link " href="rsvp.php"> RSVP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid main" id="home">
+  </div>
+  <!-- <div class="overlay container-fluid"></div> -->
+
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- <script src="http://localhost:3002/dist/aos.js"></script> -->
+
+  <script>
+    AOS.init({
+      easing: 'ease-out-back',
+      duration: 3000
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="scripts.js"></script>
+</body>
+
+
+</html>

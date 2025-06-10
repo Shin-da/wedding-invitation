@@ -1,0 +1,137 @@
+/* body{
+    overflow: hidden;
+}
+   */
+#timer {  
+  font-size: 3em;
+  font-weight: 100;
+  color: white;
+  
+  .timer {
+    background-color: #e5d8ac;
+    height: 7vh;
+    width: 40vw;
+    
+    .time {
+      background-color: #e5d8ac;
+      color: #B1CDF1;
+      font-size: .35em;
+      font-weight: 400;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+    }
+  }
+}
+.circle{
+  width: 15vw;
+  height: 15vw;
+  text-align: center;
+  background-color: #ac845c;
+  border-radius: 100%;
+}
+
+
+  .jeff{
+    margin-left: .7vw;
+    margin-bottom: -2.8vh;
+  }
+  .garcia{
+    margin-left: 16.8vh;
+  }
+  .name {
+    font-size: 6.6rem;
+  }
+  .picture{
+    margin-top: 19vh;
+  }
+  .container2{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(84, 76, 51, 0.7) 75%, #e5d8ac 100%), url("");
+  }
+  .about{
+    background-color: #e5d8ac;
+  }
+  @media (max-width: 2000px) {
+    .Head {
+      display: flex;
+        
+        height: 110vh;
+        
+        background-color: #ebcdaf;
+        background-image: url('css/headbg.jpg');
+        background-size: cover;
+    }
+    
+    .Head2 {
+        display: flex;
+          height: 110vh;
+          background-color: #ac845c;
+          background-image: url('css/weddingbg2.jpg');
+          background-size: cover;
+      }
+  }
+  
+  @media (max-width: 1100px) {
+    .Acontainer{
+        /* height: 50vh; */
+    }
+    .container1 {
+      margin-top: 0;
+        height: 55vh;
+        background-color: #fff3e7;
+    }
+    .container2{
+        height: 45vh;
+        background-color:#ebcdaf;
+    }
+    .name{
+       
+        line-height:.6; 
+        font-weight:light; 
+        font-size:9vw;
+    }
+    .userPicture{
+        /* top:2vh; */
+    }
+    .about{
+      margin-top: 52vh;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .Acontainer{
+        /* height: 20vh; */
+    }
+    .container1 {
+      background-color: #fff3e7;
+      padding-left: 12vw;
+      height: 45vh;
+    }
+    .container2{
+      height: 45vh;
+      
+      background-color:#544c33;
+    }
+    .name{
+        
+        line-height:.6; 
+        font-weight:light; 
+        font-size:9vw;
+    }
+    .garcia{
+      /* left: 17vw; */
+    }
+    .verticalCon{
+     height: 50vh;
+    }
+    .userPicture{
+        /* bottom: 3vh; */
+    }
+  }
+  @media (max-width: 600px) {
+  .container1{
+    flex-direction: row;
+  }
+  }
+
+  

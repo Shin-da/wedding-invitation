@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are Invited</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous">
+    <link
+      href='https://fonts.googleapis.com/css?family=Dancing Script&effect=emboss'
+      rel='stylesheet'>
+    <link href="https://fonts.cdnfonts.com/css/erostulla-monoline"
+      rel="stylesheet">
+    <!-- <link href="https://fonts.cdnfonts.com/css/masconia" rel="stylesheet"> -->
+    <link href="https://fonts.cdnfonts.com/css/goladon" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/enchanted-hermion-script"
+      rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/vinletha-gyldham"
+      rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/love-rose" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/goladon" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/shantell-sans" rel="stylesheet">
+    <script>
+    $('#homeimg').lazyload(options);
+  </script>
+
+    <!-- MAIN CSS -->
+    <style>
+    body {
+      background-color: #264653;
+      margin: 0;
+      padding: 0;
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      overflow: hidden;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+        duration: 3000;
+
+      }
+    }
+
+    .names {
+      color: #fff3e7;
+      font-family: 'Erostulla Monoline', sans-serif;
+      text-align: center;
+      z-index: 1;
+      top: 80px;
+    }
+
+    .tName h1,
+    .bName h1 {
+      font-size: 22vw;
+    }
+
+    .midName {
+      color: #c19c60;
+      text-align: center;
+      z-index: 2;
+      font-family: 'Erostulla Monoline', sans-serif;
+      margin-top: -50px;
+      margin-bottom: -50px;
+    }
+
+    #navv {
+      min-height: 3.5rem;
+      background-color: #152630;
+      -webkit-box-shadow: 0px -50px 50px 26px #152630;
+      box-shadow: 0px -50px 50px 26px #152630;
+    }
+
+    #navv .navbar-toggler {
+      font-size: 100%;
+      padding: 0.75rem;
+      color: #d2b48c;
+      border: 1px solid #d2b48c;
+    }
+
+    #navv .navbar-toggler:focus {
+      outline: none;
+      color: #d2b48c;
+    }
+
+    #navv .navbar-brand {
+      color: #d2b48c;
+
+      font-weight: 700;
+      padding: 0.9rem 0;
+    }
+
+    #navv .navbar-nav .nav-item:hover {
+      color: fade(#fff, 80%);
+      outline: none;
+      background-color: transparent;
+    }
+
+    #navv .navbar-brand {
+      padding: 0.5rem 0;
+      color: #fff3e7;
+
+    }
+
+    #navv .nav-li {
+      transition: none;
+      color: #c1997e;
+      font-family: 'Enchanted Hermion Script', sans-serif;
+      font-family: 'Enchanted Hermion Serif', sans-serif;
+
+      display: flex;
+      text-decoration: none;
+    }
+
+    li.nav-item {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* hover li */
+    #navv .nav-li:hover {
+      color: #fff3e7;
+    }
+
+    .header {
+      height: 34vh;
+
+    }
+
+    .header {
+
+      filter: brightness(80%);
+      background-image: url('resources/ABC01188.png');
+    }
+
+    .home {
+      height: 66vh;
+      background-color: #0e171d;
+    }
+
+    .homeimg {
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      background-position-x: right;
+      background-position-y: center;
+      filter: brightness(80%);
+      background-image: url('resources/bg\(300px\).JPG');
+
+      box-shadow: 200px 54px 99px 93px rgba(0,0,0,0.77) inset;
+      -webkit-box-shadow: 200px 54px 99px 93px rgba(0,0,0,0.77) inset;
+      -moz-box-shadow: 200px 54px 99px 93px rgba(0,0,0,0.77) inset;
+    }
+    .overlay{
+      background: rgb(88,88,88);
+      background: linear-gradient(290deg, rgba(88,88,88,0.06766456582633051) 0%, rgba(6,6,6,0.8715861344537815) 51%);
+      
+    }
+    .welcome {
+      
+      z-index: 3;
+      margin: 7vw;
+      margin-top: 10vh;
+      /* top: 23%; */
+      position: absolute;
+    }
+
+    .welcome h1 {
+      z-index: 3;
+      font-size: 32px;
+      font-family: 'love rose', sans-serif;
+      color: #fff5ee;
+      text-shadow: 5px 4px 7px rgba(0, 0, 0, 1);
+    }
+    .welcome2{
+      color: #d2b48c;
+      text-shadow: 5px 4px 7px rgba(0, 0, 0, 0.874);
+      position:  absolute ;
+      right: ;
+      bottom: 0;
+    }
+    .timer-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+  #timer {
+      width: 100%;
+      display: flex;
+      justify-content:center;
+      padding: 1%;
+      border-top-right-radius: 1pc;
+      border-top-left-radius: 1pc;
+  }
+
+  .circle {
+      color: #4f4334;
+      font-family: 'Shantell Sans', sans-serif;
+      width: 55px;
+      height: 55px;
+      background-color: #d2b48c;
+      box-shadow: #000000 1px 1px 5px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+  }
+
+  .oras {
+      padding: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+  .oras .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  .label {
+      text-align: center;
+      color: #fff3e7;
+      font-family: 'love rose', sans-serif;
+      text-shadow: 5px 4px 7px rgba(0, 0, 0, 1);
+  }
+  </style>
+    <!-- MAIN CSS -->
+
+    <style>
+    @media (min-width: 330px) {
+
+      .header {
+        height: 240px;
+        -webkit-box-shadow: inset 0px -50px 29px -11px #152630;
+        box-shadow: inset 0px -50px 29px -11px #152630;
+      }
+
+      .homeimg {
+        -webkit-box-shadow: 0px -50px 50px 26px #152630, inset 50px 28px 50px 36px rgba(0, 0, 0, 0.8);
+        box-shadow: 0px -50px 50px 26px #152630, inset 50px 28px 50px 36px rgba(0, 0, 0, 0.8);
+      }
+
+      #navv .nav-li {
+        padding: 0px 17px;
+      }
+
+      li.nav-item {
+        display: flex;
+        align-items: center;
+      }
+
+      /* hover li */
+      #navv .nav-li:hover {
+        color: rgb(255, 217, 192);
+      }
+
+      .names {
+        color: #fff3e7;
+        font-family: 'Erostulla Monoline', sans-serif;
+        text-align: center;
+        top: 80px;
+      }
+
+      .tName h1,
+      .bName h1 {
+        font-size: 72px;
+      }
+
+      .midName {
+        color: #c19c60;
+        text-align: center;
+        z-index: 2;
+        font-family: 'Erostulla Monoline', sans-serif;
+        margin-top: -50px;
+        margin-bottom: -50px;
+      }
+
+      .welcome h1 {
+        margin-top: 12%;
+        font-size: 82px;
+      }
+      .welcome2{
+        backdrop-filter: blur(2px);
+        width: 380px;
+        border-radius: 12px;
+        
+      }
+    }
+
+    @media (min-width: 330px) {
+      .homeimg {
+        background-image: url('resources/bg\(300px\).JPG');
+      }
+     
+    }
+
+    @media (max-width: 500px) {
+      .welcome h1 {
+        font-size: 42px;
+      }
+      .welcome2{
+      }
+      .circle{
+        width: 45px;
+        height: 45px
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .head {}
+    }
+  </style>
+    <script>
+    function updateTimer() {
+        future = Date.parse("December 08, 2023 10:30:00");
+        now = new Date();
+        diff = future - now;
+
+        days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = mins;
+        document.getElementById("seconds").innerHTML = secs;
+    }
+
+    setInterval(updateTimer, 1000);
+
+</script>
+  </head>
+
+  <body class="fadeOut">
+    <div class="names position-absolute " style="z-index: 9; left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; ">
+
+      <span>
+
+        <div class="name tName">
+          <h1 class="h1">
+            YnnTezhar
+          </h1>
+
+        </div>
+        <div class="name midName">
+          <h2 class="h2" style="
+        font-size: 62px;">
+            and
+          </h2>
+
+        </div>
+        <div class="name bName">
+          <h1 class="h1">
+            JayLord
+          </h1>
+        </div>
+
+      </span>
+    </div>
+    <div class="container-fluid header ">
+
+    </div>
+
+    <div>
+      <nav class="navbar " id="navv" style="z-index: 2;">
+        <div class="container px-4 px-lg-5">
+          <ul class="navbar-nav mx-auto flex-row"> <!-- Added flex-row class -->
+            <li class="nav-item"><a class="nav-li" href="index.html"> Home</a></li>
+            <li class="nav-item"><a class="nav-li" href="ourstory.html">Our
+                Story</a></li>
+            <li class="nav-item"><a class="nav-li" href="details.html">Wedding
+                Details</a></li>
+            <li class="nav-item"><a class="nav-li" href="rsvp.php"> RSVP</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid home" style="padding:0; ">
+        <div class="overlay">
+
+        </div>
+        <div class="welcome">
+          <h1 class="h1" id="text">
+
+          </h1>
+
+        </div>
+        <div class="homeimg" alt> </div>
+        <div
+          class="d-flex  flex-column welcome2"
+          style>
+          <div class>
+            <h2 class="h2 text-center"
+              style="font-family: 'Goladon', sans-serif; ">Join
+              us on
+              our big day! </h2>
+            <h3 class="text-center"
+              style="font-size:30px; font-family: 'love rose', sans-serif;">
+              December 08, 2023
+            </h3>
+          </div>
+
+          <div class="timer-container ">
+            <div class="timer text-center" id="timer">
+              <div class="oras">
+                <div class="center">
+                  <div class="circle" id="days"></div>
+                  <div class="label">Days
+                  </div>
+                </div>
+              </div>
+              <div class="oras">
+                <div class="center">
+                  <div class="circle" id="hours"></div>
+                  <div class="label">Hours
+                  </div>
+                </div>
+              </div>
+              <div class="oras">
+                <div class="center">
+                  <div class="circle" id="minutes"></div>
+                  <div class="label">Minutes
+                  </div>
+                </div>
+              </div>
+              <div class="oras">
+                <div class="center">
+                  <div class="circle" id="seconds"></div>
+                  <div class="label">Seconds
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="http://localhost:3002/dist/aos.js"></script> -->
+
+    <script>
+    AOS.init({
+      easing: 'ease-out-back',
+      duration: 3000
+    });
+  </script>
+    <script src="scripts.js"></script>
+  </body>
+  <script>
+  var string = "We are Getting Married!"; /* type your text here */
+var array = string.split("");
+var animationFrame;
+var lastFrameTime = 0;
+var delay = 50; // Adjust this value for the desired speed
+
+function frameLooper(timestamp) {
+    if (!lastFrameTime) {
+        lastFrameTime = timestamp;
+    }
+
+    var elapsed = timestamp - lastFrameTime;
+
+    if (elapsed > delay && array.length > 0) {
+        document.getElementById("text").innerHTML += array.shift();
+        lastFrameTime = timestamp;
+    }
+
+    if (array.length > 0) {
+        animationFrame = requestAnimationFrame(frameLooper);
+    }
+}
+
+frameLooper();
+
+
+</script>
+
+</html>

@@ -1,0 +1,314 @@
+body{
+  background-color: #f8f9fb;
+  padding: 0;
+}
+
+  .story{
+    background-color: #e5d3b3;
+    /* height: 110vh; */
+  }
+  
+/* .Head2 {
+      background-color: #e5d3b3;
+      background-image: url('css/weddingbg2.jpg');
+      background-size: cover;
+  } */
+  .content{
+    width:100vw; 
+  background-color:#fff3e7;
+  padding-top:19vh;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+
+  }
+
+.welcome{
+  top: 15%;
+  z-index: 1;
+  /* position: absolute; */
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+   
+}
+  .name {
+    position: absolute;
+  text-align: center;
+    top:20%;
+    font-size: 6vw;
+    font-family: 'Dancing Script';
+    text-shadow: 2px 2px 5px  #000000a9;
+  }
+  .overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgb(23,22,21);
+    background: linear-gradient(270deg, rgba(23,22,21,0) 0%, rgba(23,22,21,1) 100%);
+    /* Adjust the last value (alpha) for opacity */
+    /* z-index: -1; */
+    /* Place it behind the card */
+    /* display: none; */
+    /* Initially hidden */
+  }
+/* WEDDING DETAILS 2ND TAB */
+.tab-list{
+  font-size:2vw;
+}
+  .container-palette {
+    height: 200px;
+    width: 350px;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 10px 20px #dbdbdb;
+    font-family: sans-serif;
+  }
+  
+  .palette {
+    display: flex;
+    height: 86%;
+    width: 100%;
+  }
+  
+  .color {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: flex 0.1s linear;
+  }
+  
+  .color span {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+  
+  .color:nth-child(1) {
+    background: #264653;
+  }
+  
+  .color:nth-child(2) {
+    background: #2a9d8f;
+  }
+  
+  .color:nth-child(3) {
+    background: #e9c46a;
+  }
+  
+  .color:nth-child(4) {
+    background: #f4a261;
+  }
+  
+  .color:nth-child(5) {
+    background: #e76f51;
+  }
+  
+  .color:hover {
+    flex: 2;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .color:hover span {
+    opacity: 1;
+  }
+  
+  #stats {
+    height: 14%;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5em;
+    box-sizing: border-box;
+    color: #bebebe;
+  }
+  
+  #stats svg {
+    fill: #bebebe;
+    transform: scale(1.2);
+  }
+/* WEDDING DETAILS 2ND TAB */
+
+
+#timer {  
+  font-size: 3em;
+  /* font-weight: 100; */
+  color: rgb(84, 63, 51);
+  font-family: 'Dancing Script';
+  /* background-color: #eec7a0; */
+}
+.timer{
+  display: flex;
+  justify-content: center;
+  /* background-color: #fde2c7; */
+}
+.circle{
+  width: 85px;
+  height:85px;
+  background-color: #eec7a0;
+  box-shadow: #000000 1px 1px 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-right: 1%;
+}
+
+.guest-list {
+  list-style: none;
+}
+
+.guest-list li {
+  flex: 1; /* Equal width for both columns */
+  padding: 5px;
+  margin: 2px;
+}
+
+#container {
+  width: 200px; /* Increase the width of the container */
+  margin: 150px auto;
+}
+
+aside {
+  margin: 60px 0;
+  line-height: 40px; /* Increase the line height to center the text vertically */
+  position: relative;
+}
+
+aside:before,
+aside:after {
+  height: 0;
+  width: 0;
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0;
+}
+
+aside.ribbon2 {
+  background-color: #ffe7a9;
+}
+
+aside.ribbon2:before,
+aside.ribbon2:after {
+  top: 6px; /* Adjust the top positioning */
+}
+
+aside.ribbon2:before {
+  border-color: #dec893 #dec893 #dec893 transparent;
+  left: -45px; /* Adjust the left positioning */
+  border-width: 25px; /* Increase the border width */
+}
+
+aside.ribbon2:after {
+  border-color: #dec893 transparent #dec893 #dec893;
+  right: -45px; /* Adjust the right positioning */
+  border-width: 25px; /* Increase the border width */
+}
+
+
+.gallery h2{
+  font-family: 'Dancing Script'; font-size:4vw; margin-top:9vh;
+}
+.gallery-img{
+  background-color:#e5d3b3;
+  padding: 2vw;
+  padding-bottom: 4vh;
+  width: 19vw;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #f9f9f9;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  @media (max-width: 2000px) {
+    .Head {
+      /* display: flex; */
+        height: 80vh;
+    }
+
+    .name{
+      left: 40%;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .Head {
+      /* display: flex; */
+        height: 110vh;
+    }
+    
+
+  }
+  
+  @media (max-width: 800px) {
+    .Head {
+      display: flex;
+        height: 110vh;
+    }
+
+      #timer {  
+        font-size: 6vw;
+        font-weight: 100;
+      }
+      .circle{
+        width: 65px;
+        height:65px;
+      }
+  }
+  @media (max-width: 600px) {
+    .story {
+      margin: 0;
+    }
+
+      .circle{
+        width: 65px;
+        height:65px;
+      }
+      #timer {  
+        font-size: 7vw;
+        font-weight: 100;
+      }
+  }
+
+  

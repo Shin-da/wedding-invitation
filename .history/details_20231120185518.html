@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are Invited</title>
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script&effect=emboss' rel='stylesheet'>
+
+    <!-- CDN Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/shantell-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/jomolhari-3" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/erostulla-monoline" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/unseeness" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/goladon" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/heightened" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bacasime-antique" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/simple-home" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bacasime-antique" rel="stylesheet">
+
+
+    <style>
+        html {
+            background-color: #152630;
+        }
+
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            background-color: #123;
+        }
+
+        .tab-list .active {
+            background-color: #4f6a74;
+            color: #d0c0ab;
+        }
+
+        .tab-pane {
+            margin-bottom: 12vh;
+        }
+
+        .tab-list {
+
+            color: #d2b48c;
+            background-color: #264653;
+            margin-left: 4px;
+            margin-right: 4px;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            font-family: 'Goladon', sans-serif;
+            display: inline-block;
+            border: none;
+            padding: 13px 18px;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: background 250ms ease-in-out,
+                transform 150ms ease;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        .text {
+            font-family: 'Edu SA Beginner', sans-serif;
+            font-size: 1rem;
+        }
+
+        div .location {
+            font-family: 'Erostulla Monoline', sans-serif;
+            font-size: 3rem;
+            color: #6eafd4;
+        }
+
+        .text .loc {
+
+            font-family: 'Shantell Sans', sans-serif;
+        }
+
+        .timer-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #timer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 1%;
+            background-color: #fff3e7;
+            border-top-right-radius: 1pc;
+            border-top-left-radius: 1pc;
+        }
+
+        .circle {
+            color: #4f4334;
+            font-family: 'Shantell Sans', sans-serif;
+            width: 65px;
+            height: 65px;
+            background-color: #d2b48c;
+            box-shadow: #000000 1px 1px 5px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .oras {
+            padding: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .oras .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .label {
+            text-align: center;
+            color: #fff3e7;
+            font-family: 'Shantell Sans', sans-serif;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #mainNav {
+            font-family: 'Dancing Script';
+            background-color: #152630;
+        }
+
+        /* Your existing styles */
+
+        .content-holder {
+
+            margin-top: 60px;
+            position: relative;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* or overflow: hidden; depending on your preference */
+        }
+
+        .content1,
+        .content2 {
+            padding-bottom: 2%;
+            position: relative;
+            padding: 2%;
+            margin: 0;
+            height: auto;
+            width: 100%;
+        }
+
+        .back {
+            position: absolute;
+            color: #d2b48c;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            /* Ensure the button appears above other content */
+        }
+
+        .next {
+            position: absolute;
+            color: #d2b48c;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            /* Ensure the button appears above other content */
+        }
+
+        .entourage-list {
+            max-width: 800px;
+            margin: 20px auto;
+            /* Center the column horizontally */
+            padding: 20px;
+            text-align: center;
+            /* Center the text within the container */
+        }
+
+        .role {
+            font-family: 'Bacasime Antique', sans-serif;
+            text-align: center;
+            font-weight: 400;
+            font-size: 34px;
+            color: #4a0a0a;
+        }
+
+        .person {
+            font-family: 'Bacasime Antique', sans-serif;
+            letter-spacing: 6px;
+            text-align: center;
+            color: #152630;
+            font-size: 27px;
+            line-height: 3;
+        }
+        .name{
+            margin-bottom: 6%;
+        }
+
+        .NameL {
+            margin-left: -28%;
+        }
+
+        .NameR {
+            margin-right: -28%;
+            margin-top: -5%;
+            margin-bottom: 10%;
+        }
+
+        /* Override Bootstrap container styles */
+        .custom-container {
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        /* General Styles */
+        .theme-section {
+            background-color: #fff3e7;
+            border-radius: 8px;
+            padding: 3vh;
+            margin: 3vh;
+        }
+
+        .theme-heading {
+            font-family: 'Dancing Script';
+            margin-top: 5vh;
+            margin-bottom: 3vh;
+        }
+
+        /* Dresscode Styles */
+        .dresscode-container {
+            font-family: 'Goladon', sans-serif;
+            margin-bottom: 5vh;
+        }
+
+        .dress-code {
+            color: #4a0a0a;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .theme-heading {
+                margin-top: 3vh;
+                margin-bottom: 2vh;
+            }
+
+            .dresscode-container {
+                margin-bottom: 3vh;
+            }
+        }
+
+        .tab-pane {
+            padding: 20px;
+            /* Add padding to the tab pane to create space around the content */
+        }
+
+        .container {
+
+            /* Ensure that containers don't exceed the width of the viewport */
+            margin: 0 auto;
+            /* Center the container */
+        }
+
+        .gallery-img {
+            position: relative;
+            margin: 1%;
+            overflow: hidden;
+        }
+
+        .restriction-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .color {
+            margin: 5px;
+            /* Add margin to the color palette squares */
+        }
+
+        .text-center {
+            text-align: center;
+            /* Ensure that text is centered */
+        }
+
+        .gallery {
+            flex-wrap: wrap;
+            /* Allow gallery items to wrap on smaller screens */
+        }
+
+        .sample-attire-section {
+            margin: 3vh;
+            text-align: center;
+        }
+
+        .section-title {
+            margin-bottom: 2vh;
+        }
+
+        .gallery-container {
+            background-color: #fff3e7;
+            padding: 3vw;
+            margin: 3vh;
+        }
+
+        .gallery-heading {
+            font-family: 'Goladon', sans-serif;
+            color: #4a0a0a;
+            padding: 2vw;
+            background-color: #fff3e7;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-img {
+            background-color: #fffcf7;
+            display: block;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+            margin: 1vw;
+            padding-bottom: 6vh;
+        }
+
+        .gallery-imgB {
+            width: 300px;
+        }
+
+
+        /* Media query for screens less than or equal to 600px */
+        @media (max-width: 600px) {
+
+
+            .back {
+                position: absolute;
+                top: 45%;
+                left: 0;
+                z-index: 999;
+            }
+
+            .next {
+                position: absolute;
+                top: 45%;
+                right: 0;
+                z-index: 999;
+            }
+
+            .person {
+                letter-spacing: 6px;
+                text-align: center;
+                color: #152630;
+                font-size: 15px;
+                line-height: 3;
+            }
+
+        }
+
+        @media (max-width: 400px) {
+            .tab-list {
+                margin-left: 2px;
+                margin-right: 2px;
+                padding: 13px 12px;
+                font-size: 14px;
+                cursor: pointer;
+                text-align: center;
+                transition: background 250ms ease-in-out,
+                    transform 150ms ease;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+
+            .story {
+                background-color: #fff3e7;
+                padding: 0;
+            }
+
+            .content {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .signs {
+                text-align: center;
+            }
+
+            .sign img {}
+        }
+
+        @media (min-width: 992px) {
+
+            /* BOOKMARK */
+            #mainNav .navbar-brand {
+                padding: 0.5rem 0;
+                color: #fff3e7;
+            }
+
+            #mainNav .nav-link {
+                transition: none;
+                padding: 2rem 1.5rem;
+                color: #fff3e7;
+                font-family: 'Dancing Script';
+                display: flex;
+                justify-content: center;
+            }
+
+            /* hover li */
+            #mainNav .nav-link:hover {
+                color: rgb(193, 153, 126);
+            }
+
+            #mainNav .nav-link:active {
+                color: rgb(193, 153, 126);
+
+            }
+
+            /* bookmark */
+            #mainNav.navbar-shrink {
+                background: none;
+                background-color: #224156;
+            }
+
+            #mainNav.navbar-shrink .navbar-brand {
+                color: #fff3e7;
+            }
+
+            #mainNav.navbar-shrink .nav-link {
+                color: #fff3e7;
+                padding: 1.5rem 1.5rem 1.25rem;
+                border-bottom: 0.25rem solid transparent;
+            }
+
+            #mainNav.navbar-shrink .nav-link:hover {
+                color: rgb(193, 153, 126);
+            }
+
+            #mainNav.navbar-shrink .nav-link:active {
+                color: rgb(100, 75, 62);
+            }
+
+            #mainNav.navbar-shrink .nav-link.active {
+                color: rgb(193, 153, 126);
+                outline: none;
+                border-bottom: 0.25rem solid rgb(193, 153, 126);
+                ;
+            }
+
+            .container h1 {
+                margin-top: 9vh;
+                font-size: 3em;
+            }
+
+            .container h2 {
+                font-family: 'Dancing Script';
+                margin-top: 9vh;
+                margin-bottom: 5vh;
+            }
+        }
+    </style>
+    <script>
+        function updateTimer() {
+            future = Date.parse("December 08, 2023 10:30:00");
+            now = new Date();
+            diff = future - now;
+
+            days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = mins;
+            document.getElementById("seconds").innerHTML = secs;
+        }
+
+        setInterval(updateTimer, 1000);
+
+    </script>
+</head>
+
+<body class="fadeOut">
+    <!-- BACKGROUND MUSIC -->
+    <!-- <audio src="buttercup.mp3" autoplay loop></audio> -->
+
+    <nav class="navbar navbar-expand-lg navbar fixed-top" id="mainNav"
+        style="background-color:#152630;  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">
+
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link " href="index.html"> Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="ourstory.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#details" href="details.html">Wedding Details</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link " href="rsvp.php"> RSVP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="weddingTimeline.html">Wedding Timeline</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid story" id="details">
+        <div class=" content ">
+
+            <div class="container-fluid ">
+                <!-- TAB FUNCTION -->
+                <div style="">
+                    <div class="container" style="margin-top: 8vh; margin-bottom: 8vh; padding:0;">
+                        <h1 class="h1 text-center title" style="font-family: 'Simple Home', sans-serif;
+                        color: #84693c;">Wedding Details</h1>
+                    </div>
+                    <nav class="">
+                        <div class="text-center nav nav-tabs mb-3 justify-content-center d-flex" id="nav-tab">
+                            <button class="list-link tab-list active" id="nav-home-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                aria-selected="true">Home</button>
+                            <button class="list-link tab-list" id="nav-profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                aria-selected="false">Attire</button>
+                            <button class="list-link tab-list" id="nav-contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                aria-selected="false">Location</button>
+                        </div>
+                    </nav>
+                    <!-- ALL TABS -->
+                    <div class="tab-content bg-light" id="nav-tabContent">
+                        <!-- TAB1 -->
+                        <div class="tab-pane fade active show" id="nav-home" role="tabpanel"
+                            aria-labelledby="nav-home-tab" style="padding:4%;background-color: #fff3e7;">
+                            <!-- TAB 1CONTENT -->
+                            <div class="container">
+                                <h2 class="h2 text-center">Our Wedding Entourage</h2>
+
+                            </div>
+
+                            <div class="moreContent">
+
+                                <div class="content-holder">
+                                    <button class="back btnn">
+                                        < </button>
+                                            <div class="content1 contentA active text-center " style="">
+                                                <h2 class="role" style="font-family: 'Goladon', sans-serif; ">
+                                                    Principal Sponsors
+                                                </h2>
+                                                <div class="container entourage-list">
+                                                    <div class="">
+                                                        <div>
+                                                            <div class="person NameL">Mr.Armando</div>
+                                                            <div class="person NameR">Ms.Jessica Olan</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Mr.Peter Jamias </div>
+                                                            <div class="person NameR">Ms.Marivic Quintana</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Mr.Micon Abelidas</div>
+                                                            <div class="person NameR">Ms.Marivic Osera</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Mr.Ed Mujeco</div>
+                                                            <div class="person NameR">Ms.Jing Mujeco</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Mr.Donard Acanto</div>
+                                                            <div class="person NameR">Tr.Aida Pasicolan</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Ms.Elizabeth Palmos</div>
+                                                            <div class="person NameR">Mr.Larry Marie</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Mr.--Daisilan</div>
+                                                            <div class="person NameR">Ms.Richelle Pallustre </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Mr.Nero </div>
+                                                            <div class="person NameR">Ms.Noemi Salvador</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Mr.Victor</div>
+                                                            <div class="person NameR">Ms.Rose Villagracia</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Mr.Antonio Negrillo</div>
+                                                            <div class="person NameR">Ms.Arlene Dolar</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="person NameL">Hon.Gary Remoquillo</div>
+                                                            <div class="person NameR">Ms.Irene Palmos</div>
+                                                        </div>
+                                                        <div class="person">Father Marlon Numbera</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="content2 contentA">
+
+                                                <div class="container entourage-list">
+                                                    <div>
+                                                        <div class="column">
+                                                            <div class="person">
+                                                                <h3 class="role"
+                                                                    style="font-family: 'Goladon', sans-serif;">
+                                                                    Man of Honor
+                                                                </h3>
+                                                                <div class="name">
+                                                                    Mr.Mark Nicole
+                                                                    Evangelista
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="person">
+                                                                <h3 class="role"
+                                                                    style="font-family: 'Goladon', sans-serif; ">
+                                                                    Best Man
+                                                                </h3>
+                                                                <div class="name">
+                                                                    Mr.Bonifacio
+                                                                    Arratea Jr.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="column">
+                                                            <div class="person">
+                                                                <h3 class="role"
+                                                                    style="font-family: 'Goladon', sans-serif; ">
+                                                                    Candle
+                                                                </h3>
+                                                                <div class="name">
+                                                                    Mr.Allen Jay Acanto
+                                                              <br>
+                                                                    Ms.Siane Grace
+                                                                    Navarrete
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="person">
+                                                                <h3 class="role" style="font-family: 'Goladon', sans-serif; ">
+                                                                    Cord
+                                                                </h3>
+                                                                <div class="name">
+                                                                    Mr.Edgar Salvador
+                                                                    Jr.
+                                                                    <br>
+                                                                    Ms.Quin Bea
+                                                                    Torrecampo</div>
+                                                            </div>
+
+                                                            <div class="person">
+                                                                <h3 class="role" style="font-family: 'Goladon', sans-serif; ">
+                                                                   Veil
+                                                                </h3>
+                                                                <div class="name">
+                                                                    Ms.Karel Ejeda
+                                                                <br>
+                                                                    Mr.Rassel Villegas
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <button class="next btnn"> > </button>
+                                </div>
+                            </div>
+                            <!-- TAB 1 CONTENT -->
+                        </div>
+                        <!-- TAB1 -->
+                        <!-- TAB2 -->
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                            style="background-color: #fff3e7;">
+                            <!-- TAB2 CONTENT -->
+                            <div class="theme-section">
+                                <div class="">
+                                    <h1 class="theme-heading text-center">
+                                        Theme and Dresscode</h1>
+                                </div>
+
+                                <div class="container dresscode-container text-center">
+                                    <p class="dress-code">
+                                        Strictly Formal Attire
+                                    </p>
+                                    <p class="dress-code">
+                                        Ladies: Cocktail Dress
+                                    </p>
+                                    <p class="dress-code">
+                                        Gentlemen: Polo or Longsleeves and
+                                        Pants
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <div class="sample-attire-section">
+                                    <div class="section-title">
+                                        <h2 class="h2 text-center" style="
+                                        font-family: 'Dancing Script';">Guest sample attire</h2>
+                                    </div>
+
+                                    <div class="gallery d-flex justify-content-center">
+                                        <div class="gallery-img">
+                                            <img src="resources/Men1.jpg" alt="Sample Attire 1">
+                                        </div>
+                                        <div class="gallery-img">
+                                            <img src="resources/womenA.png" alt="Sample Attire 2">
+                                        </div>
+                                        <div class="gallery-img">
+                                            <img src="resources/Men2.jpg" alt="Sample Attire 3">
+                                        </div>
+                                        <div class="gallery-img">
+                                            <img src="resources/WomenB.png" alt="Sample Attire 4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sample-attire-section">
+                                    <div class="section-title">
+                                        <h2 class="h2 text-center" style="
+                                        font-family: 'Dancing Script';">Principal Sponsor's sample attire</h2>
+                                    </div>
+
+                                    <div class="gallery d-flex justify-content-center">
+                                        <div class="gallery-img">
+                                            <img src="resources/sponsorM1.jpg" alt="Sample Attire 1">
+                                        </div>
+                                        <div class="gallery-img">
+                                            <img src="resources/sponsorW1.jpg" alt="Sample Attire 2">
+                                        </div>
+                                        <div class="gallery-img">
+                                            <img src="resources/sponsorM2.jpg" alt="Sample Attire 3">
+                                        </div>
+                                        <div class="gallery-img">
+                                            <img src="resources/sponsorW2.jpg" alt="Sample Attire 4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="cardd">
+                                        <div class=" text-center">
+                                            <h2 style="
+                                            font-family: 'Dancing Script'; color:#d2b48c;">
+                                                Color Motif
+                                            </h2>
+                                        </div>
+                                        <div class="wrapper">
+                                            <div class="color black">
+
+                                                <span class="hex">#152630</span>
+                                            </div>
+                                            <div class="color eerie-black">
+
+                                                <span class="hex">#015c91</span>
+                                            </div>
+                                            <div class="color chinese-black">
+
+                                                <span class="hex">#2c82b5</span>
+                                            </div>
+                                            <div class="color night-rider">
+
+                                                <span class="hex">#88cdf6</span>
+                                            </div>
+                                            <div class="color white">
+
+                                                <span class="hex">#bce6ff</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="gallery d-flex justify-content-center">
+                                    <h5 class="text-center"
+                                        style="font-family: 'Goladon', sans-serif;color: #4a0a0a; background-color:#fff3e7; padding:3vw;">
+                                        <strong>(STRICTLY NO WHITE, RED, SHORTS, PANTS JEANS AND SLIPPERS)</strong>
+                                    </h5>
+
+                                    <div class="gallery d-flex justify-content-center">
+                                        <div class="gallery-img">
+                                            <img src="resources/.jpg" width="100%" alt="">
+                                            <div class="restriction-overlay">
+                                                🚫</div>
+                                        </div>
+                                        <div class="gallery-img">
+                                            <img src="resources/slippers.jpg" width="100%" alt="">
+                                            <img class="restriction-overlay" width="100%" style="transform: rotate(0.25turn);"
+                                                src="noo.png" alt="">
+                                        </div>
+                                        <div class="gallery-img">
+                                            <img src="resources/red.jpg" width="100%" alt="">
+                                            <!-- No overlay for this image -->
+                                        </div>
+                                        <div class="gallery-img">
+                                            <img src="resources/shorts.jpg" width="100%" alt="">
+                                            <div class="restriction-overlay">
+                                                🚫</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- TAB2 CONTENT -->
+                        </div>
+                        <!-- TAB2 -->
+                        <!-- TAB3 -->
+                        <div class="tab-pane fade " id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
+                            style="background-color: #fff3e7;">
+                            <!-- TAB3 CONTENT -->
+                            <!-- CHURCH -->
+                            <div class="container">
+                                <div style="padding-top: 3%;">
+                                    <h2 class="h2 text-center">Church</h2>
+                                </div>
+
+                                <div class="gallery d-flex justify-content-center">
+                                    <div class="gallery-img gallery-imgB">
+                                        <img src="resources/church2.jpg" alt="Church Image 1">
+                                    </div>
+                                    <div class="gallery-img gallery-imgB">
+                                        <img src="resources/church1.jpg" alt="Church Image 2">
+                                    </div>
+                                    <div class="gallery-img gallery-imgB">
+                                        <img src="resources/church3.jpg" alt="Church Image 3">
+                                    </div>
+                                </div>
+
+                                <div class="container text-center text">
+                                    <div class="address-container">
+                                        <h3 class="location">Saint Gregory
+                                            Church</h3>
+                                        <p class="loc">Indang, Cavite</p>
+                                    </div>
+
+                                    <div class="directions-container">
+                                        <h5>
+                                            You may use joyride app to book a ride going to indang or tagaytay
+                                            its the only app they can use
+                                        </h5>
+                                        <p>For precise directions, click the
+                                            "<a
+                                                href="https://maps.google.com/maps/dir//Saint+Gregory+Academy+Indang+5VWH%2BCCM+San+Gregorio+St+Indang,+Cavite/@14.1960981,120.8785438,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x33bd820e429a25d1:0xa2fd9dc4a977077c">
+                                                Directions
+                                            </a>" button on the map below
+                                            and enter your starting
+                                            location:
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" container-liquid text-center" style="width: 100%; 
+                                    padding:2vh; 
+                                    background-color:#d2b48c; 
+                                    border-bottom-left-radius: 1pc;
+                                    border-bottom-right-radius: 1pc;
+                                    border-top-left-radius: 1pc;
+                                    border-top-right-radius: 1pc;
+                                    margin-bottom:4vh;;
+                                    ">
+                                <div class="container" style="width: 60vw; height:50vh;">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.9773726586723!2d120.87596887407258!3d14.196103286853992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd820e429a25d1%3A0xa2fd9dc4a977077c!2sSaint%20Gregory%20Academy%20Indang!5e0!3m2!1sen!2sph!4v1699745733074!5m2!1sen!2sph"
+                                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="text text-center">
+                                <p>
+                                    Saint Gregory Church
+                                    Indang, Cavite
+                                </p>
+                            </div>
+                            <!-- CHURCH -->
+                            <div class="container">
+                                <div style="padding-top: 3%;">
+                                    <h2 class="h2 text-center">Reception</h2>
+                                </div>
+
+                                <div class="gallery reception d-flex justify-content-center">
+                                    <div class="gallery-img gallery-imgB">
+                                        <img src="resources/miara.png" alt="Reception Image 1">
+                                    </div>
+                                    <div class="gallery-img gallery-imgB">
+                                        <img src="resources/miarac.jpg" alt="Reception Image 2">
+                                    </div>
+                                    <div class="gallery-img gallery-imgB">
+                                        <img src="resources/miaraB.png" alt="Reception Image 3">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container">
+                                <div class="address-container text-center">
+                                    <div class="text text-center">
+                                        <h3 class="location">
+
+                                            Miara Events Place
+                                        </h3>
+                                        <p class="loc"> Yakhua Bldg, Tagaytay,
+                                            Cavite</p>
+                                    </div>
+                                </div>
+                                <div class="directions-container text-center text">
+
+                                    <p>For precise directions, click the
+                                        "<a
+                                            href="https://maps.google.com/maps/dir//Miara+Events+Place+Yakhua+Bldg+Tagaytay+Cavite/@14.0978596,120.9206694,15z/data=!4m5!4m4!1m0!1m2!1m1!1s0x33bd77cee0de0cb9:0x63bc4d628cc2ace9">
+                                            Directions
+                                        </a>" button on the map below and
+                                        enter your starting location:</p>
+
+                                </div>
+                            </div>
+                            <div class=" container-liquid text-center" style="width: 100%; 
+                                    padding:2vh; 
+                                    background-color:#d2b48c; 
+                                    border-bottom-left-radius: 1pc;
+                                    border-bottom-right-radius: 1pc;
+                                    border-top-left-radius: 1pc;
+                                    border-top-right-radius: 1pc;
+                                    margin-bottom:4vh;;
+                                    ">
+                                <div class="container" style="width: 60vw; height:50vh;">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7739.276647453314!2d120.91594868205937!3d14.098515108979791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd77cee0de0cb9%3A0x63bc4d628cc2ace9!2sMiara%20Events%20Place!5e0!3m2!1sen!2sph!4v1699438124995!5m2!1sen!2sph"
+                                        width="100%" height="100%" style="border:0; border-radius:1pc;"
+                                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="text text-center">
+                                <p>
+                                    Miara Events Place Yakhua Bldg, Tagaytay,
+                                    Cavite
+                                </p>
+                                <p>For inquiries, please contact:
+                                    <span class="contact-info">xxxxx</span>
+                                </p>
+                            </div>
+                            <div
+                                style=" width:100%; height:25vh; display:flex; justify-content:center; flex-direction:column; align-items:center;">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- TAB3 CONTENT -->
+                </div>
+                <!-- TAB3 -->
+            </div>
+            <!-- ALL TABS -->
+        </div>
+        <!-- TAB FUNCTION -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="http://localhost:3002/dist/aos.js"></script> -->
+
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+
+
+</html>

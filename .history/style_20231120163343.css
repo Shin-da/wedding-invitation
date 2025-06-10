@@ -1,0 +1,428 @@
+/* @import url('https://fonts.cdnfonts.com/css/shantell-sans'); */
+/* @import url('https://fonts.cdnfonts.com/css/amstelan'); */
+
+body {
+  background-color: #264653;
+  padding: 0;
+}
+
+.header {
+  background-color: #264653;
+}
+
+.story {
+  padding: 0;
+  background-color: #264653;
+  /* padding-bottom: 30vh; */
+}
+
+#text {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+/* WEDDING DETAILS 1ST TAB */
+.content-holder {
+  /* border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px; */
+  height: 220px;
+  display: flex;
+  align-items: center;
+  /* box-shadow: 0px 2px 40px #000000; */
+  overflow: auto;
+  justify-content: space-between;
+}
+
+.contentA {
+  border-radius: 2px;
+  text-align: center;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.contentA.active {
+  display: block;
+  padding-top: 7%;
+  opacity: 1;
+}
+
+.btnn {
+  background-color: #b9b9b907;
+  color: #13050b9a;
+  border: none;
+  font-size: 30px;
+  z-index: 1;
+  width: 80px;
+  height: 220px;
+  
+}
+
+.back {
+  /* border-top-right-radius: 7pc; */
+  left: 13%;
+  /* display: none; */
+}
+
+.next {
+  /* border-top-left-radius: 7pc; */
+  /* top: 0; */
+  right: 13%;
+}
+
+/* .next:hover {
+  background: rgb(23,22,21);
+  background: linear-gradient(90deg, rgba(23, 22, 21, 0) 0%, rgba(23, 22, 21, 0.203) 100%);
+  animation-delay: 2s;
+} */
+
+/* .back:hover {
+  background: rgb(23, 22, 21);
+  background: rgb(23, 22, 21);
+  background: linear-gradient(270deg, rgba(23, 22, 21, 0) 0%, rgba(23, 22, 21, 0.207) 100%);
+} */
+
+
+/* WEDDING DETAILS 1ST TAB */
+/* WEDDING DETAILS 2ND TAB */
+.cardd {
+  background-color: transparent;
+  --black: #152630;
+  --ch-black: #015c91;
+  --eer-black: #53a6d8;
+  --night-rider: #88cdf6;
+  --white: #bce6ff;
+  font-family: Helvetica, sans-serif;
+}
+
+.wrapper {
+  margin: 2rem auto;
+  font-size: small;
+  background-color:#fffcf7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hex {
+  text-align: end;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.black {
+  background: var(--black);
+  color: var(--ch-white);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.eerie-black {
+  background: var(--ch-black);
+  color: var(--ch-white);
+}
+
+.chinese-black {
+  background: var(--eer-black);
+  color: var(--ch-white);
+}
+
+.night-rider {
+  background: var(--night-rider);
+  color: var(--ch-white);
+}
+
+.chinese-white {
+  background: var(--ch-white);
+  color: var(--night-rider);
+}
+
+.anti-flash-white {
+  background: var(--af-white);
+  color: var(--night-rider);
+}
+
+.white {
+  background: var(--white);
+  color: var(--night-rider);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.border {
+  color: var(--night-rider);
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.border span {
+  border-radius: 5px;
+  color: var(--ch-white);
+  padding: 2px 4px;
+  background-color: var(--night-rider);
+}
+/* WEDDING DETAILS 2ND TAB */
+
+/*  */
+
+
+.guest-list {
+  list-style: none;
+}
+
+.guest-list li {
+  flex: 1;
+  /* Equal width for both columns */
+  padding: 5px;
+  margin: 2px;
+}
+
+/*  */
+
+/*  */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galleryB {
+  border-radius: 8px;
+  margin-top: 12vh;
+  padding: 5vw;
+}
+
+.gallery .reception {
+  /* margin-bottom: 17%; */
+}
+
+.container h1 {
+  font-size: 4em;
+  font-family: 'Simple Home', sans-serif;
+  color: #84693c;
+}
+
+.container h2 {
+  font-family: 'Dancing Script';
+  font-size: 4em;
+  color: #264653;
+}
+
+.title {
+  font-size: 4em;
+  font-family: 'Simple Home', sans-serif;
+  color: #84693c;
+}
+
+.username h2 {
+  font-size: 70px;
+  text-align: center;
+}
+.gallery-container {
+  background-color: #fff3e7;
+  padding: 3vw;
+  margin: 3vh;
+}
+
+.gallery-heading {
+  font-family: 'Goladon', sans-serif;
+  color: #4a0a0a;
+  padding: 2vw;
+  background-color: #fff3e7;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-img {
+  background-color: #fffcf7;
+  display: block;
+  padding: 15px;
+  width: 180px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  margin: 1vw;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-imgGuest {
+  background-color: #fffcf7;
+  display: block;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  margin: 1vw;
+}
+/*  */
+
+/* Modal styles */
+.form h3 {
+  font-family: 'Dancing Script';
+  font-size: 29px;
+  color: #264653;
+}
+
+.lbl-inp {
+  padding: 50px;
+}
+
+.lbl-inp h3 {
+  font-family: 'Dancing Script';
+  font-size: 22px;
+  color: #c19c60;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 30%);
+}
+
+.modal-content {
+  background-color: #f9f9f9;
+  /* top: 10%; */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+
+  max-width: 600px;
+  border-radius: 5px;
+  position: fixed;
+
+  top: 300px;
+  margin-top: -100px;
+  /* Negative half of height. */
+  margin-left: -250px;
+  /* Negative half of width. */
+}
+
+/* Close button */
+
+.close {
+  border-radius: 2px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgb(172, 94, 78);
+  color: rgb(255, 255, 255);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.close:hover {
+  color: black;
+
+  background-color: rgb(140, 82, 70);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add this in your <style> or custom CSS file */
+#closeRSVPForm {
+  cursor: pointer;
+  font-size: 24px;
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#closeRSVPForm:hover {
+  color: #333;
+}
+
+.content {
+  background-color: #fff3e7;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  padding-top: 19vh;
+  padding-bottom: 19vh;
+}
+
+@media (max-width: 1800px) {
+  .Head {
+    /* display: flex; */
+    height: 80vh;
+  }
+
+  .content {
+    padding-top: 16vh;
+  }
+
+  .container .title {
+    font-size: 6em;
+  }
+  .container h2{
+    font-size:3rem;
+  }
+
+}
+
+@media (max-width: 1100px) {
+  .content {
+    /* padding-top:15vh; */
+    margin: 0;
+  }
+
+  .container .title {
+    font-size: 9vw;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .story {
+    padding: 0;
+  }
+
+  .content {
+    margin: 0;
+    padding-left: -93px;
+    padding-top: 19vh;
+    padding-bottom: 19vh;
+  }
+
+  .container .title {
+    font-size: 5em;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .story {
+    padding: 0;
+  }
+
+  .content {
+    margin: 0;
+    left: 0;
+    padding-left: -93px;
+    padding-top: 19vh;
+    padding-bottom: 19vh;
+  }
+
+  .container .title {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 400px) {}

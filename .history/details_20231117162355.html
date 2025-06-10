@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are Invited</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/shantell-sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script&effect=emboss' rel='stylesheet'>
+    <link href="https://fonts.cdnfonts.com/css/edu-sa-beginner" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/jomolhari-3" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/unseeness" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/erostulla-monoline" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/goladon" rel="stylesheet">
+
+    <style>
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        .tab-list .active {
+            background-color: #334c55;
+            color: #d0c0ab;
+        }
+
+        .tab-pane {
+            margin-bottom: 12vh;
+        }
+
+        .tab-list {
+
+            color: #d2b48c;
+            background-color: #264653;
+            margin-left: 4px;
+            margin-right: 4px;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            font-family: 'Goladon', sans-serif;
+            display: inline-block;
+            border: none;
+            padding: 13px 18px;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: background 250ms ease-in-out,
+                transform 150ms ease;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        .text {
+            font-family: 'Edu SA Beginner', sans-serif;
+            font-size: 1rem;
+        }
+
+        div .location {
+            font-family: 'Erostulla Monoline', sans-serif;
+            font-size: 3rem;
+            color: #6eafd4;
+        }
+
+        .text .loc {
+
+            font-family: 'Shantell Sans', sans-serif;
+        }
+
+        .timer-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #timer {
+            display: flex;
+            justify-content: space-between;
+            padding: 1%;
+        }
+
+        .circle {
+            color: #fff3e7;
+            font-family: 'Shantell Sans', sans-serif;
+            width: 55px;
+            height: 55px;
+            background-color: #263a45;
+            box-shadow: #000000 1px 1px 5px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .oras {
+            padding: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .oras .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .label {
+            text-align: center;
+            color: rgb(84, 63, 51);
+            font-family: 'Shantell Sans', sans-serif;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #mainNav {
+            font-family: 'Dancing Script';
+            background-color: #152630;
+        }
+
+        @media (max-width: 400px) {
+            .tab-list {
+                margin-left: 2px;
+                margin-right: 2px;
+                padding: 13px 12px;
+                font-size: 14px;
+                cursor: pointer;
+                text-align: center;
+                transition: background 250ms ease-in-out,
+                    transform 150ms ease;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+
+            .story {
+                background-color: #fff3e7;
+                padding: 0;
+            }
+
+            .content {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .signs {
+                text-align: center;
+                padding: 3%;
+            }
+
+            .sign img {
+                width: 200px;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            /* BOOKMARK */
+            #mainNav .navbar-brand {
+                padding: 0.5rem 0;
+                color: #fff3e7;
+            }
+
+            #mainNav .nav-link {
+                transition: none;
+                padding: 2rem 1.5rem;
+                color: #fff3e7;
+                font-family: 'Dancing Script';
+                display: flex;
+                justify-content: center;
+            }
+
+            /* hover li */
+            #mainNav .nav-link:hover {
+                color: rgb(193, 153, 126);
+            }
+
+            #mainNav .nav-link:active {
+                color: rgb(193, 153, 126);
+
+            }
+
+            /* bookmark */
+            #mainNav.navbar-shrink {
+                background: none;
+                background-color: #224156;
+            }
+
+            #mainNav.navbar-shrink .navbar-brand {
+                color: #fff3e7;
+            }
+
+            #mainNav.navbar-shrink .nav-link {
+                color: #fff3e7;
+                padding: 1.5rem 1.5rem 1.25rem;
+                border-bottom: 0.25rem solid transparent;
+            }
+
+            #mainNav.navbar-shrink .nav-link:hover {
+                color: rgb(193, 153, 126);
+            }
+
+            #mainNav.navbar-shrink .nav-link:active {
+                color: rgb(100, 75, 62);
+            }
+
+            #mainNav.navbar-shrink .nav-link.active {
+                color: rgb(193, 153, 126);
+                outline: none;
+                border-bottom: 0.25rem solid rgb(193, 153, 126);
+                ;
+            }
+
+            .signs {
+                display: flex;
+                justify-content: center;
+                padding: 3%;
+            }
+
+            .sign {
+                border-radius: 100%;
+                margin: 2%;
+                display: block;
+            }
+
+            .sign img {
+                width: 180px;
+                border-radius: 100%;
+            }
+
+        }
+    </style>
+    <script>
+        function updateTimer() {
+            future = Date.parse("December 08, 2023 10:30:00");
+            now = new Date();
+            diff = future - now;
+
+            days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = mins;
+            document.getElementById("seconds").innerHTML = secs;
+        }
+
+        setInterval(updateTimer, 1000);
+
+    </script>
+</head>
+
+<body class="fadeOut">
+    <!-- BACKGROUND MUSIC -->
+    <!-- <audio src="buttercup.mp3" autoplay loop></audio> -->
+
+    <nav class="navbar navbar-expand-lg navbar fixed-top" id="mainNav"
+        style="background-color:#152630;  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">
+
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link " href="index.html"> Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="ourstory.html" style="-color:#123;">Our Story</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link " href="#details">Wedding Details</a></li>
+                    <li class="nav-item"><a class="nav-link " href="rsvp.php"> RSVP</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid story" id="details">
+        <div class="container content ">
+
+            <div class="container-fluid ">
+                <!-- TAB FUNCTION -->
+                <div class=" p-3 ">
+                    <div class="container" style="margin-top: 8vh; margin-bottom: 8vh; ">
+
+                        <h1 class="h1 text-center title" style="
+                        font-family: 'Dancing Script';">Wedding Details</h1>
+
+                    </div>
+                    <nav class="">
+                        <div class="text-center nav nav-tabs mb-3 justify-content-center d-flex" id="nav-tab">
+                            <button class="list-link tab-list active" id="nav-home-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                aria-selected="true">Home</button>
+                            <button class="list-link tab-list" id="nav-profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                aria-selected="false">Attire</button>
+                            <button class="list-link tab-list" id="nav-contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                aria-selected="false">Location</button>
+                        </div>
+                    </nav>
+                    <!-- ALL TABS -->
+                    <div class="tab-content p-3 border bg-light" id="nav-tabContent" style="margin-top: -14px;">
+                        <!-- TAB1 -->
+                        <div class="tab-pane fade active show" id="nav-home" role="tabpanel"
+                            aria-labelledby="nav-home-tab">
+                            <!-- TAB 1CONTENT -->
+                            <h2 class="h2 text-center">Our Wedding Entourage</h2>
+
+                            <div class="moreContent">
+
+                                <div class="content-holder">
+                                    <button class="back btnn">
+                                        < </button>
+                                            <div class="content1 contentA active">
+                                                <!-- <img src="resources/entourage.png" width="70%" alt=""> -->
+                                            </div>
+
+                                            <div class="content2 contentA">
+
+
+                                                <div class="info2">
+                                                    <center>
+                                                        <h1 class="recentProj">Projects</h1>
+                                                        <h2 class="subhead"><i>Recent individual/group Projects.</i>
+                                                        </h2>
+                                                    </center>
+                                                    <div class="overlayProj"></div>
+
+                                                </div>
+
+                                                <script>
+                                                    document.addEventListener("DOMContentLoaded", function () {
+                                                        const projects = document.querySelectorAll(".proj");
+                                                        let currentIndex = 0;
+                                                        function showNextProject() {
+                                                            projects[currentIndex].style.display = "none";
+                                                            currentIndex = (currentIndex + 1) % projects.length;
+                                                            projects[currentIndex].style.display = "block";
+                                                            setTimeout(showNextProject, 6000);
+                                                        }
+                                                        showNextProject();
+                                                    });
+                                                </script>
+                                            </div>
+                                            <button class="next btnn"> > </button>
+                                </div>
+                            </div>
+                            <!-- TAB 1 CONTENT -->
+                        </div>
+                        <!-- TAB1 -->
+                        <!-- TAB2 -->
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <!-- TAB2 CONTENT -->
+                            <h2 class="h2 text-center mb-3">Theme and Dresscode</h2>
+                            <span class="text-center" style="font-family: 'Jomolhari', sans-serif; 
+                            ">
+                                <p>
+                                    Strictly Formal Attire
+                                </p>
+                                <p>
+                                    Ladies: Cocktail Dress
+                                </p>
+                                <p>
+                                    Gentlemen: Polo or Longsleeves and Pants
+                                </p>
+                                <!-- 
+                                <strong class="text-center " style=" color:#264653;">
+                                    Shades of blue
+                                </strong> -->
+
+                            </span>
+
+                            <div>
+                                <div style="margin: 3vh;">
+                                    <h2 class="h2 text-center">Here are some sample attire </h2>
+                                </div>
+                                <div class="gallery d-flex justify-content-center">
+
+                                    <div class="gallery-img ">
+                                        <img src="resources/sample1.png" width="100%" alt="">
+                                    </div>
+
+                                    <div class="gallery-img">
+                                        <img src="resources/sampleb.png" width="100%" alt="">
+                                    </div>
+                                    <div class="gallery-img">
+                                        <img src="resources/sample3.png" width="100%" alt="">
+                                    </div>
+                                    <div class="gallery-img">
+                                        <img src="resources/samplea.png" width="100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div style="margin: 3vh;">
+                                        <h2 class="h2 text-center">Some sample color</h2>
+                                    </div>
+                                    <div class="container container-palette">
+                                        <div class="palette">
+                                            <div class="color"><span>264653</span></div>
+                                            <div class="color"><span>2A9D8F</span></div>
+                                            <div class="color"><span>E9C46A</span></div>
+                                            <div class="color"><span>F4A261</span></div>
+                                            <div class="color"><span>E76F51</span></div>
+                                        </div>
+                                        <div id="stats">
+                                            <span class="text-center">Color Palette</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="galleryB">
+                                    <p class="text-center">
+                                        <strong>(STRICTLY NO black and white, no SHORTS and SLIPPERS)</strong>
+                                    </p>
+
+                                    <div class="signs">
+                                        <div class="sign">
+                                            <img src="resources/no black.png" alt="">
+                                        </div>
+                                        <div class="sign">
+                                            <img src="resources/noslippers.jpg" alt="">
+                                        </div>
+                                        <div class="sign">
+                                            <img src="resources/no red.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TAB2 CONTENT -->
+                        </div>
+                        <!-- TAB2 -->
+                        <!-- TAB3 -->
+                        <div class="tab-pane fade " id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <!-- TAB3 CONTENT -->
+                            <!-- CHURCH -->
+                            <div>
+                                <h2 class="h2 text-center">Church</h2>
+                                <div class="gallery">
+                                    <div class="gallery-imgB">
+                                        <img src="resources/miara.png" width="100%" alt="">
+                                    </div>
+
+                                    <div class="gallery-imgB">
+                                        <img src="resources/miaraA.png" width="100%" alt="">
+                                    </div>
+                                    <div class="gallery-imgB">
+                                        <img src="resources/miaraB.png" width="100%" alt="">
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="address-container text-center text">
+                                        <h3 class="location">Saint Gregory Church</h3>
+                                        <p class="loc">Indang, Cavite</p>
+
+                                    </div>
+                                    <div class="directions-container text-center text">
+
+                                        <p>For precise directions, click the
+                                            "<a
+                                                href="https://maps.google.com/maps/dir//Saint+Gregory+Academy+Indang+5VWH%2BCCM+San+Gregorio+St+Indang,+Cavite/@14.1960981,120.8785438,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x33bd820e429a25d1:0xa2fd9dc4a977077c">
+                                                Directions
+                                            </a>" button on the map below and
+                                            enter your starting location:</p>
+
+                                    </div>
+                                </div>
+                                <div class=" container-liquid text-center" style="width: 100%; 
+                                    padding:2vh; 
+                                    background-color:#d2b48c; 
+                                    border-bottom-left-radius: 1pc;
+                                    border-bottom-right-radius: 1pc;
+                                    border-top-left-radius: 1pc;
+                                    border-top-right-radius: 1pc;
+                                    margin-bottom:4vh;;
+                                    ">
+                                    <div class="container" style="width: 60vw; height:50vh;">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.9773726586723!2d120.87596887407258!3d14.196103286853992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd820e429a25d1%3A0xa2fd9dc4a977077c!2sSaint%20Gregory%20Academy%20Indang!5e0!3m2!1sen!2sph!4v1699745733074!5m2!1sen!2sph"
+                                            width="100%" height="100%" style="border:0;" allowfullscreen=""
+                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <div class="text text-center">
+                                    <p>
+                                        Saint Gregory Church
+                                        Indang, Cavite
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- CHURCH -->
+                            <div>
+                                <h2 class="h2 text-center">Reception</h2>
+
+                                <div class="gallery reception">
+                                    <div class="gallery-imgB">
+                                        <img src="resources/miara.png" width="100%" alt="">
+                                    </div>
+
+                                    <div class="gallery-imgB">
+                                        <img src="resources/miaraA.png" width="100%" alt="">
+                                    </div>
+                                    <div class="gallery-imgB">
+                                        <img src="resources/miaraB.png" width="100%" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="container">
+                                    <div class="address-container text-center">
+                                        <div class="text text-center">
+                                            <h3 class="location">
+
+                                                Miara Events Place
+                                            </h3>
+                                            <p class="loc"> Yakhua Bldg, Tagaytay, Cavite</p>
+                                        </div>
+                                    </div>
+                                    <div class="directions-container text-center text">
+
+                                        <p>For precise directions, click the
+                                            "<a
+                                                href="https://maps.google.com/maps/dir//Miara+Events+Place+Yakhua+Bldg+Tagaytay+Cavite/@14.0978596,120.9206694,15z/data=!4m5!4m4!1m0!1m2!1m1!1s0x33bd77cee0de0cb9:0x63bc4d628cc2ace9">
+                                                Directions
+                                            </a>" button on the map below and
+                                            enter your starting location:</p>
+
+                                    </div>
+                                </div>
+                                <div class=" container-liquid text-center" style="width: 100%; 
+                                    padding:2vh; 
+                                    background-color:#d2b48c; 
+                                    border-bottom-left-radius: 1pc;
+                                    border-bottom-right-radius: 1pc;
+                                    border-top-left-radius: 1pc;
+                                    border-top-right-radius: 1pc;
+                                    margin-bottom:4vh;;
+                                    ">
+                                    <div class="container" style="width: 60vw; height:50vh;">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7739.276647453314!2d120.91594868205937!3d14.098515108979791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd77cee0de0cb9%3A0x63bc4d628cc2ace9!2sMiara%20Events%20Place!5e0!3m2!1sen!2sph!4v1699438124995!5m2!1sen!2sph"
+                                            width="100%" height="100%" style="border:0; border-radius:1pc;"
+                                            allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <div class="text text-center">
+                                    <p>
+                                        Miara Events Place Yakhua Bldg, Tagaytay, Cavite
+                                    </p>
+                                    <p>For inquiries, please contact:
+                                        <span class="contact-info">xxxxx</span>
+                                    </p>
+                                </div>
+                                <div
+                                    style=" width:100%; height:25vh; display:flex; justify-content:center; flex-direction:column; align-items:center;">
+                                    <div>
+                                        <h2 class="text-center">
+                                            Join us on our Big Day!
+                                        </h2>
+                                    </div>
+                                    <div class="timer-container " style="margin-right: 10%;">
+                                        <div class="timer" id="timer">
+                                            <div class="oras">
+                                                <div class="center">
+                                                    <div class="circle" id="days"></div>
+                                                    <div class="label">Days</div>
+                                                </div>
+                                            </div>
+                                            <div class="oras">
+                                                <div class="center">
+                                                    <div class="circle" id="hours"></div>
+                                                    <div class="label">Hours</div>
+                                                </div>
+                                            </div>
+                                            <div class="oras">
+                                                <div class="center">
+                                                    <div class="circle" id="minutes"></div>
+                                                    <div class="label">Minutes</div>
+                                                </div>
+                                            </div>
+                                            <div class="oras">
+                                                <div class="center">
+                                                    <div class="circle" id="seconds"></div>
+                                                    <div class="label">Seconds</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- TAB3 CONTENT -->
+                        </div>
+                        <!-- TAB3 -->
+                    </div>
+                    <!-- ALL TABS -->
+                </div>
+                <!-- TAB FUNCTION -->
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
+                </script>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <!-- <script src="http://localhost:3002/dist/aos.js"></script> -->
+
+                <script>
+                    AOS.init({
+                        easing: 'ease-out-back',
+                        duration: 1000
+                    });
+                </script>
+                <script src="scripts.js"></script>
+</body>
+
+
+</html>
