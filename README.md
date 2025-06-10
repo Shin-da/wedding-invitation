@@ -16,62 +16,94 @@ This wedding invitation website combines modern design with functionality to cre
 
 ## Technologies Used
 
-- PHP 7.4+
-- MySQL 5.7+
+### Frontend
 - HTML5
 - CSS3
-- JavaScript/jQuery
+- JavaScript
 - Bootstrap 5
 - AOS (Animate On Scroll)
+- LightGallery.js
+- Font Awesome
+- Google Fonts
+
+### Backend (RSVP System)
+- PHP 7.4+
+- MySQL 5.7+
+- Apache/Nginx
+
+Note: The hosted version on GitHub Pages only includes the static frontend. The RSVP system is deactivated for public viewing.
 
 ## Requirements
 
+For viewing:
+- Modern web browser
+- Internet connection for loading external resources
+
+For full RSVP functionality:
 - XAMPP/WAMP/LAMP server
 - PHP 7.4 or higher
 - MySQL 5.7 or higher
-- Modern web browser
 
-## Installation
+## Quick Start
 
-1. Clone the repository:
+### Static Website (GitHub Pages Version)
+1. View the live demo at https://shin-da.github.io/wedding-invitation
+2. Or clone and run locally:
 ```bash
-git clone https://github.com/yourusername/elegant-wedding-invitation.git
+git clone https://github.com/Shin-da/wedding-invitation.git
+cd wedding-invitation
 ```
+Then open `index.html` in your web browser.
 
-2. Import the database:
-- Create a new database named 'wedding'
-- Import the SQL file from `database/wedding.sql`
+### Full Version with RSVP System
+1. Clone the repository
+2. Set up your local server (XAMPP/WAMP/LAMP)
+3. Import the database:
+   ```sql
+   mysql -u root -p wedding < database/wedding.sql
+   ```
+4. Configure database connection in `config/database.php`
+5. Access through your local server (e.g., http://localhost/wedding-invitation)
 
-3. Configure database connection:
-- Open `config/database.php`
-- Update database credentials if needed
+### Customization
+- Update wedding details in `index.html`
+- Modify styles in `css/main.css`
+- Adjust animations in `js/main.js`
+- Configure RSVP system in PHP files
+- Replace images in `assets/images/`
 
-4. Start your web server and navigate to the project directory
+Note: This is a commissioned project. Please respect the license terms.
 
 ## Project Structure
 
 ```
-elegant-wedding-invitation/
-├── config/
-│   └── database.php
-├── css/
-│   ├── style.css
-│   └── fonts.css
-├── js/
-│   └── scripts.js
-├── resources/
-│   └── images/
-├── includes/
+wedding-invitation/
+├── assets/                # Static assets
+│   ├── audio/            # Background music
+│   ├── images/           # Image assets
+│   │   ├── dress-code/   # Dress code examples
+│   │   ├── gallery/      # Gallery images
+│   │   ├── hero/         # Hero section images
+│   │   └── prenup/       # Pre-wedding photos
+├── config/               # Configuration files
+│   └── database.php      # Database configuration
+├── css/                  # Stylesheets
+│   └── main.css         # Main styles
+├── database/            # Database files
+│   └── wedding.sql      # Database schema and data
+├── includes/           # PHP includes
 │   ├── header.php
-│   └── footer.php
-├── database/
-│   └── wedding.sql
-└── pages/
-    ├── rsvp.php
-    ├── details.html
-    ├── timeline.html
-    └── gallery.html
+│   ├── footer.php
+│   └── utils.php       # Utility functions
+├── js/                 # JavaScript files
+│   └── main.js        # Main functionality
+├── pages/             # Additional pages
+│   ├── rsvp.php      # RSVP form
+│   └── details.html  # Event details
+└── index.html        # Main entry point
 ```
+
+Note: Some PHP files are deactivated in the hosted version.
 
 ## Features in Detail
 
@@ -99,7 +131,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Created by Jeffmathew D. Garcia
+Copyright © 2023-2025 Jeffmathew D. Garcia
+All rights reserved.
+
+This work was created as a commissioned project.
+Unauthorized copying, modification, or distribution of this work is prohibited.
+See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
