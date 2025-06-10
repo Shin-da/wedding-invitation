@@ -16,37 +16,36 @@ This wedding invitation website combines modern design with functionality to cre
 
 ## Technologies Used
 
-- PHP 7.4+
-- MySQL 5.7+
 - HTML5
 - CSS3
-- JavaScript/jQuery
+- JavaScript
 - Bootstrap 5
 - AOS (Animate On Scroll)
+- LightGallery.js
+- Font Awesome
+- Google Fonts
 
 ## Requirements
 
-- XAMPP/WAMP/LAMP server
-- PHP 7.4 or higher
-- MySQL 5.7 or higher
 - Modern web browser
+- Internet connection for loading external resources
 
-## Installation
+## Quick Start
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/elegant-wedding-invitation.git
+git clone https://github.com/Shin-da/wedding-invitation.git
 ```
 
-2. Import the database:
-- Create a new database named 'wedding'
-- Import the SQL file from `database/wedding.sql`
+2. Open `index.html` in your web browser
 
-3. Configure database connection:
-- Open `config/database.php`
-- Update database credentials if needed
+3. To customize for your own use:
+   - Update wedding details in `index.html`
+   - Modify styles in `css/main.css`
+   - Adjust animations and functionality in `js/main.js`
+   - Replace images in `assets/images/` directory
 
-4. Start your web server and navigate to the project directory
+Note: This is a commissioned project. Please respect the license terms.
 
 ## Project Structure
 
@@ -99,7 +98,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Created by Jeffmathew D. Garcia
+Copyright © 2023-2025 Jeffmathew D. Garcia
+All rights reserved.
+
+This work was created as a commissioned project.
+Unauthorized copying, modification, or distribution of this work is prohibited.
+See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
