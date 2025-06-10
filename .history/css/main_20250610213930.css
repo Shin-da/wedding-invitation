@@ -1,0 +1,309 @@
+/* Modern Wedding Website Styles */
+
+:root {
+    --primary-color: #947155;
+    --secondary-color: #d4b08c;
+    --text-color: #2c2c2c;
+    --light-color: #f8f5f2;
+    --dark-color: #1a1a1a;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-script: 'Dancing Script', cursive;
+    --transition: all 0.3s ease;
+}
+
+.date {
+  font-family: "Bacasime Antique", sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    duration: 3000;
+  }
+}
+
+.names {
+  color: var(--background-light);
+  font-family: 'Erostulla Monoline', sans-serif;
+  text-align: center;
+  z-index: 1;
+  top: 80px;
+}
+
+.tName h1,
+.bName h1 {
+  font-size: 22vw;
+}
+
+.midName {
+  color: #c19c60;
+  text-align: center;
+  z-index: 2;
+  font-family: 'Erostulla Monoline', sans-serif;
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+#navv {
+  min-height: 3.5rem;
+  background-color: #152630;
+  -webkit-box-shadow: 0px -50px 50px 26px #152630;
+  box-shadow: 0px -50px 50px 26px #152630;
+}
+
+#navv .navbar-toggler {
+  font-size: 100%;
+  padding: 0.75rem;
+  color: #d2b48c;
+  border: 1px solid #d2b48c;
+}
+
+#navv .navbar-toggler:focus {
+  outline: none;
+}
+
+/* ===== Typography ===== */
+.title {
+  font-size: 4em;
+  font-family: var(--font-heading);
+  color: var(--accent-color);
+}
+
+h1 {
+  font-size: 4em;
+  font-family: var(--font-heading);
+  color: var(--accent-color);
+}
+
+h2 {
+  font-family: var(--font-script);
+  font-size: 4em;
+  color: var(--primary-color);
+}
+
+/* ===== Layout Components ===== */
+.header {
+  background-color: var(--primary-color);
+}
+
+.content {
+  background-color: var(--background-light);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  padding: 19vh 0;
+}
+
+/* ===== Gallery ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-container {
+  background-color: var(--background-light);
+  padding: 3vw;
+  margin: 3vh;
+}
+
+.gallery-heading {
+  font-family: 'Goladon', sans-serif;
+  color: #4a0a0a;
+  padding: 2vw;
+  background-color: var(--background-light);
+}
+
+.gallery-img {
+  background-color: var(--background-white);
+  padding: 15px;
+  width: 180px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  margin: 1vw;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-imgGuest {
+  background-color: var(--background-white);
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  margin: 1vw;
+}
+
+/* ===== Wedding Details Slider ===== */
+.content-holder {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  justify-content: space-between;
+}
+
+.contentA {
+  border-radius: 2px;
+  text-align: center;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.contentA.active {
+  display: block;
+  padding-top: 1%;
+  opacity: 1;
+}
+
+.btnn {
+  background-color: rgba(185, 185, 185, 0.03);
+  border: none;
+  width: 80px;
+  height: 220px;
+  font-size: 42px;
+}
+
+/* ===== Modal Styles ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  position: fixed;
+  top: 300px;
+  margin-top: -100px;
+  margin-left: -250px;
+}
+
+.close {
+  border-radius: 2px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgb(172, 94, 78);
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.close:hover {
+  color: black;
+  background-color: rgb(140, 82, 70);
+  cursor: pointer;
+}
+
+/* ===== Form Styles ===== */
+.form h3 {
+  font-family: var(--font-script);
+  font-size: 29px;
+  color: var(--primary-color);
+}
+
+.lbl-inp {
+  padding: 50px;
+}
+
+.lbl-inp h3 {
+  font-family: var(--font-script);
+  font-size: 22px;
+  color: #c19c60;
+}
+
+/* ===== Guest List ===== */
+.guest-list {
+  list-style: none;
+}
+
+.guest-list li {
+  flex: 1;
+  padding: 5px;
+  margin: 2px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1800px) {
+  .Head {
+    height: 80vh;
+  }
+
+  .content {
+    padding-top: 16vh;
+  }
+
+  .container .title {
+    font-size: 6em;
+  }
+  
+  .container h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .content {
+    margin: 0;
+  }
+
+  .container .title {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .story {
+    padding: 0;
+  }
+
+  .content {
+    margin: 0;
+    padding-left: 0;
+    padding-top: 19vh;
+    padding-bottom: 19vh;
+  }
+
+  .container .title {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .story {
+    padding: 0;
+  }
+
+  .content {
+    margin: 0;
+    padding-left: 0;
+  }
+}

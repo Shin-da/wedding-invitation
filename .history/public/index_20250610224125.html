@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Celebration</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#our-story">Our Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#details">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dress-code">Dress Code</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Music Toggle -->
+    <div id="musicToggle" class="music-toggle">
+        <i class="fas fa-volume-mute"></i>
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="../assets/audio/buttercup.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center position-relative">
+        <div class="overlay"></div>
+        <div class="container text-center">
+            <div data-aos="fade-up" data-aos-duration="1500">
+                <h2 class="invitation-subtext">We're Getting Married</h2>
+                <h1 class="couple-names">
+                    <span class="bride">Bride</span>
+                    <span class="and">&</span>
+                    <span class="groom">Groom</span>
+                </h1>
+                <p class="wedding-date">June 10, 2025</p>
+                <div id="countdown" class="countdown mt-4"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section id="our-story" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Our Love Story</h2>
+            <div class="timeline mt-5">
+                <!-- Timeline items loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Details -->
+    <section id="details" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Wedding Details</h2>
+            <div class="row mt-5 g-4">
+                <div class="col-md-6" data-aos="fade-right">                    <div class="event-card ceremony">
+                        <div class="card-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3>The Ceremony</h3>
+                        <p class="venue">Saint Gregory the Great Parish</p>
+                        <p class="time">2:00 PM</p>
+                        <p class="address">Indang, Cavite<br>Philippines</p>
+                        <div class="map-container mt-3">
+                            <iframe 
+                                width="100%"
+                                height="200"
+                                style="border:0;border-radius:10px;"
+                                loading="lazy"
+                                allowfullscreen
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990201.5130910334!2d119.65883547812498!3d14.196262100000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd8360db2809d9%3A0xe80da375b1caf966!2sSaint%20Gregory%20the%20Great%20Parish!5e0!3m2!1sen!2sph!4v1749564623953!5m2!1sen!2sph">
+                            </iframe>
+                        </div>
+                        <a href="https://maps.google.com/maps?q=Saint+Gregory+the+Great+Parish+Indang+Cavite" class="btn btn-outline-primary mt-3" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>                <div class="col-md-6" data-aos="fade-left">
+                    <div class="event-card reception">
+                        <div class="card-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <h3>The Reception</h3>
+                        <p class="venue">Miara Events Place</p>
+                        <p class="time">6:00 PM</p>
+                        <p class="address">General Aguinaldo Highway<br>Alfonso, Cavite</p>
+                        <div class="map-container mt-3">
+                            <iframe 
+                                width="100%"
+                                height="200"
+                                style="border:0;border-radius:10px;"
+                                loading="lazy"
+                                allowfullscreen
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.6494425409396!2d120.9206694!3d14.097859599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd77cee0de0cb9%3A0x63bc4d628cc2ace9!2sMiara%20Events%20Place!5e0!3m2!1sen!2sph!4v1749565609989!5m2!1sen!2sph">
+                            </iframe>
+                        </div>
+                        <a href="https://maps.google.com/maps?q=Miara+Events+Place+Alfonso+Cavite" class="btn btn-outline-primary mt-3" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Our Moments</h2>
+            <div class="lightgallery row g-4 mt-4" id="gallery-grid">
+                <!-- Gallery items loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code -->
+    <section id="dress-code" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Dress Code</h2>
+            <div class="row mt-4 g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="dress-card">
+                        <h3>Ladies</h3>
+                        <p>Long dress in pastel colors</p>                        <div class="dress-examples row g-3">
+                            <div class="col-6">
+                                <img src="../assets/images/dress-code/womenA.jpg" alt="Ladies Example 1" class="img-fluid rounded">
+                            </div>
+                            <div class="col-6">
+                                <img src="../assets/images/dress-code/womenB.jpg" alt="Ladies Example 2" class="img-fluid rounded">
+                            </div>
+                            <div class="col-12">
+                                <img src="../assets/images/dress-code/womenC.jpg" alt="Ladies Example 3" class="img-fluid rounded">
+                            </div>
+                        </div>
+                        <div class="dress-not-allowed mt-4">
+                            <h4>Please Avoid</h4>
+                            <div class="row g-2">                                <div class="col-4">
+                                    <div class="not-allowed-item">
+                                        <img src="../assets/images/dress-code/jeans.jpg" alt="No Jeans" class="img-fluid">
+                                        <span>No Jeans</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="not-allowed-item">
+                                        <img src="../assets/images/dress-code/shorts.jpg" alt="No Shorts" class="img-fluid">
+                                        <span>No Shorts</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="not-allowed-item">
+                                        <img src="../assets/images/dress-code/slippers.jpg" alt="No Slippers" class="img-fluid">
+                                        <span>No Slippers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="dress-card">
+                        <h3>Gentlemen</h3>
+                        <p>Dark suit with pastel tie</p>                        <div class="dress-examples row g-3">
+                            <div class="col-6">
+                                <img src="../assets/images/dress-code/menA.jpg" alt="Men Example 1" class="img-fluid rounded">
+                            </div>
+                            <div class="col-6">
+                                <img src="../assets/images/dress-code/menB.jpg" alt="Men Example 2" class="img-fluid rounded">
+                            </div>
+                        </div>
+                        <div class="dress-not-allowed mt-4">
+                            <h4>Please Avoid</h4>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <div class="not-allowed-item">
+                                        <img src="../assets/images/dress-code/jean.png" alt="No Jeans" class="img-fluid">
+                                        <span>No Jeans</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="not-allowed-item">
+                                        <img src="../assets/images/dress-code/shorts.png" alt="No Shorts" class="img-fluid">
+                                        <span>No Shorts</span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="not-allowed-item">
+                                        <img src="../assets/images/dress-code/slippers.png" alt="No Slippers" class="img-fluid">
+                                        <span>No Slippers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-0">We can't wait to celebrate with you!</p>
+            <div class="social-links mt-3">
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+/*
+Wedding Invitation Template
+Created by Jeffmathew D. Garcia
+Copyright © 2023-2025 Jeffmathew D. Garcia
+All rights reserved.
+
+This work was created as a commissioned project.
+Unauthorized copying, modification, or distribution of this work is prohibited.
+*/
+
+/* Modern Wedding Website Styles */
+
+:root {
+    --primary-color: #947155;
+    --secondary-color: #d4b08c;
+    --text-color: #2c2c2c;
+    --light-color: #f8f5f2;
+    --dark-color: #1a1a1a;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-script: 'Dancing Script', cursive;
+    --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    line-height: 1.8;
+    overflow-x: hidden;
+    background-color: var(--light-color);
+}
+
+/* Music Toggle */
+.music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('../assets/images/hero/main.jpg') center 25%/cover no-repeat fixed;
+    background-position: center 25%;
+    color: white;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    #hero {
+        background-position: center 20%;
+    }
+}
+
+@media (max-width: 576px) {
+    #hero {
+        background-position: center 15%;
+    }
+}
+
+/* Countdown */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.countdown-item {
+    text-align: center;
+    min-width: 80px;
+}
+
+.countdown-item .number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+
+.countdown-item .label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.countdown-complete {
+    text-align: center;
+    color: var(--primary-color);
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.countdown-complete h3 {
+    font-family: var(--font-script);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.countdown-complete p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Event Cards */
+.event-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.event-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.event-card .venue {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-card .time {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--secondary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border: 4px solid var(--light-color);
+    border-radius: 50%;
+    top: 15px;
+    right: -10px;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item.right::after {
+    left: -10px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content .date {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Gallery Styles */
+.gallery-item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-overlay i {
+    color: white;
+    font-size: 2.5rem;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay i {
+    transform: scale(1);
+}
+
+/* Dress Code Styles */
+.dress-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dress-card h3 {
+    color: var(--primary-color);
+    font-family: var(--font-script);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dress-examples img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    height: 250px;
+    object-fit: cover;
+}
+
+.dress-examples img:hover {
+    transform: scale(1.02);
+}
+
+.dress-not-allowed {
+    background: #fff5f5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.dress-not-allowed h4 {
+    color: #dc3545;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.not-allowed-item {
+    text-align: center;
+}
+
+.not-allowed-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+
+.not-allowed-item span {
+    display: block;
+    font-size: 0.8rem;
+    color: #dc3545;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: rgba(21, 21, 21, 0.1);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    padding: 1rem 0;
+}
+
+.navbar.scrolled {
+    background: rgba(21, 21, 21, 0.9);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    transition: var(--transition);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .countdown {
+        gap: 1rem;
+    }
+    
+    .countdown-item {
+        min-width: 60px;
+    }
+    
+    .countdown-item .number {
+        font-size: 1.8rem;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item.right {
+        left: 0;
+    }
+    
+    .timeline-item::after {
+        left: 21px;
+    }
+    
+    .timeline-item.right::after {
+        left: 21px;
+    }
+}
