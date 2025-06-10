@@ -1,6 +1,9 @@
-# Elegant Wedding Invitation System
+# Modern Wedding Invitation Website
 
-A beautiful and interactive wedding invitation system built with PHP, MySQL, and modern web technologies.
+A beautiful, responsive wedding invitation website created as a commissioned project. This elegant digital invitation features a countdown timer, photo gallery with lightbox, Google Maps integration, and a classy design perfect for modern couples.
+
+## Overview
+This wedding invitation website combines modern design with functionality to create a memorable online presence for wedding celebrations. It features smooth animations, responsive design, and an intuitive user interface that works seamlessly across all devices.
 
 ## Features
 
