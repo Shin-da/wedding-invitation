@@ -1,160 +1,59 @@
 # Modern Wedding Invitation Website
 
-![Website Preview](image.png)
+A beautiful, responsive wedding invitation website — built as a commissioned client project and shared here as a portfolio sample. It features a countdown timer, photo gallery with lightbox, event details with map integration, and an optional RSVP system.
 
-![License](https://img.shields.io/badge/license-Custom-blue)
-![Version](https://img.shields.io/badge/version-1.0.0-green)
-![PHP](https://img.shields.io/badge/PHP-7.4+-purple)
-![MySQL](https://img.shields.io/badge/MySQL-5.7+-orange)
-
-A beautiful, responsive wedding invitation website created as a commissioned project. This elegant digital invitation features a countdown timer, photo gallery with lightbox, Google Maps integration, and a classy design perfect for modern couples.
-
-## Overview
-This wedding invitation website combines modern design with functionality to create a memorable online presence for wedding celebrations. It features smooth animations, responsive design, and an intuitive user interface that works seamlessly across all devices.
+> **Note:** This is a sanitized public version. Client photos, guest data, and private configuration have been removed. The demo uses placeholder content only.
 
 ## Features
 
-- 💌 Digital Wedding Invitation
-- 📝 RSVP System
-- 📸 Photo Gallery
-- 📅 Wedding Timeline
-- 📍 Event Details
-- 🎯 Responsive Design
+- 💌 Digital wedding invitation with smooth animations
+- 📸 Photo gallery with lightbox
+- 📅 Wedding timeline / "Our Story" section
+- 📍 Event details with map integration
+- 📝 Optional RSVP system (PHP/MySQL)
+- 🎯 Fully responsive design
 
-## Technologies Used
+## Tech Stack
 
-### Frontend
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- AOS (Animate On Scroll)
-- LightGallery.js
-- Font Awesome
-- Google Fonts
+**Frontend:** HTML5, CSS3, JavaScript, Bootstrap 5, AOS, LightGallery.js, Font Awesome, Google Fonts
 
-### Backend (RSVP System)
-- PHP 7.4+
-- MySQL 5.7+
-- Apache/Nginx
-
-Note: The hosted version on GitHub Pages only includes the static frontend. The RSVP system is deactivated for public viewing.
-
-## Requirements
-
-For viewing:
-- Modern web browser
-- Internet connection for loading external resources
-
-For full RSVP functionality:
-- XAMPP/WAMP/LAMP server
-- PHP 7.4 or higher
-- MySQL 5.7 or higher
+**Backend (optional RSVP):** PHP 7.4+, MySQL 5.7+, Apache/Nginx
 
 ## Quick Start
 
-### Static Website (GitHub Pages Version)
-1. View the live demo at https://shin-da.github.io/wedding-invitation
-2. Or clone and run locally:
+### Static site
+
 ```bash
 git clone https://github.com/Shin-da/wedding-invitation.git
 cd wedding-invitation
 ```
-Then open `index.html` in your web browser.
 
-### Full Version with RSVP System
-1. Clone the repository
-2. Set up your local server (XAMPP/WAMP/LAMP)
-3. Import the database:
-   ```sql
-   mysql -u root -p wedding < database/wedding.sql
-   ```
-4. Configure database connection in `config/database.php`
-5. Access through your local server (e.g., http://localhost/wedding-invitation)
+Open `index.html` in your browser.
 
-### Customization
-- Update wedding details in `index.html`
-- Modify styles in `css/main.css`
-- Adjust animations in `js/main.js`
-- Configure RSVP system in PHP files
-- Replace images in `assets/images/`
+### With the RSVP backend
 
-Note: This is a commissioned project. Please respect the license terms.
+1. Set up a local server (XAMPP/WAMP/LAMP).
+2. Copy `config/database.example.php` to `config/database.php` and fill in your own credentials.
+3. Create the database using your own schema (a sample structure is described in the docs; no real data is included).
+4. Access via your local server, e.g. `http://localhost/wedding-invitation`.
 
 ## Project Structure
 
 ```
 wedding-invitation/
-├── assets/                # Static assets
-│   ├── audio/            # Background music
-│   ├── images/           # Image assets
-│   │   ├── dress-code/   # Dress code examples
-│   │   ├── gallery/      # Gallery images
-│   │   ├── hero/         # Hero section images
-│   │   └── prenup/       # Pre-wedding photos
-├── config/               # Configuration files
-│   └── database.php      # Database configuration
-├── css/                  # Stylesheets
-│   └── main.css         # Main styles
-├── database/            # Database files
-│   └── wedding.sql      # Database schema and data
-├── includes/           # PHP includes
-│   ├── header.php
-│   ├── footer.php
-│   └── utils.php       # Utility functions
-├── js/                 # JavaScript files
-│   └── main.js        # Main functionality
-├── pages/             # Additional pages
-│   ├── rsvp.php      # RSVP form
-│   └── details.html  # Event details
-└── index.html        # Main entry point
+├── assets/        # Images, fonts, media (placeholders only)
+├── config/        # database.example.php (no real credentials)
+├── css/           # Stylesheets
+├── includes/      # PHP partials (header, footer, utils)
+├── js/            # JavaScript
+├── pages/         # Additional pages (RSVP, details)
+└── index.html     # Entry point
 ```
 
-Note: Some PHP files are deactivated in the hosted version.
+## Credits
 
-## Features in Detail
-
-### Digital Invitation
-- Beautiful and responsive design
-- Smooth animations and transitions
-- Our Story section with timeline
-- Photo gallery with carousel
-
-### RSVP System
-- Guest registration and response tracking
-- Attendance confirmation
-- Special requirements input
-- Admin dashboard for managing responses
-
-### Event Details
-- Wedding ceremony details
-- Reception information
-- Location maps and directions
-- Dress code information
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+Designed and developed by **Shin** ([@Shin-da](https://github.com/Shin-da)).
 
 ## License
 
-Created by Jeffmathew D. Garcia
-Copyright © 2023-2025 Jeffmathew D. Garcia
-All rights reserved.
-
-This work was created as a commissioned project.
-Unauthorized copying, modification, or distribution of this work is prohibited.
-See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Bootstrap team for the amazing framework
-- AOS library for smooth animations
-- All contributors who helped with the project
-
-## Contact
-
-For any questions or concerns, please open an issue or contact the maintainers.
-
----
-Made with ❤️ for celebrations
+This work was created as a commissioned project and is shared for portfolio and educational purposes. Please don't redistribute or reuse it commercially without permission. See the [LICENSE](LICENSE) file.
